@@ -1,0 +1,13 @@
+.campo-container-dropdown {
+  display: inline-grid;
+  width: 100%;
+}
+
+::ng-deep .campo-container-dropdown .p-dropdown .p-dropdown-label {
+  padding: 0.1rem;
+}
+
+::ng-deep .gambiarra > div {
+  padding: 0.3rem;
+  margin-top: 3px;
+}

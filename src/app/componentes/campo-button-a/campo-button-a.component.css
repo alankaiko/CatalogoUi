@@ -1,0 +1,12 @@
+.campo-container-texto {
+  display: inline-grid;
+  width: 100%;
+}
+
+.campo-container-texto .botao-imagem-a > img {
+  width: 75%;
+}
+
+.campo-container-texto .botao-imagem-a > img:hover {
+  width: 90%;
+}

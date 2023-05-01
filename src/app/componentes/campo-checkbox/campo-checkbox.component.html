@@ -1,0 +1,10 @@
+<div class="campo-container-texto">
+  <label>{{labelText}}</label>
+  <p-checkbox (change)="textoChange.emit(texto)"
+              [style]="style"
+              [binary]="binary"
+              [class]="classe"
+              [readonly]="readOnly"
+              [(ngModel)]="texto">
+  </p-checkbox>
+</div>

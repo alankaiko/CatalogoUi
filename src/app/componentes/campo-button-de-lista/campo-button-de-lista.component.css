@@ -1,0 +1,8 @@
+.campo-container-texto {
+  display: inline-grid;
+  width: 100%;
+}
+
+.botao-link {
+  cursor: pointer;
+}

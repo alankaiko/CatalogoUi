@@ -1,0 +1,8 @@
+.campo-container-mascara {
+  display: inline-grid;
+  width: 100%;
+}
+
+::ng-deep .campo-container-mascara .p-inputtext {
+  padding: 0.1rem;
+}

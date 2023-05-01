@@ -1,0 +1,26 @@
+::ng-deep .p-dialog .p-dialog-header {
+  background-color: #1E88E5;
+  background-image: -webkit-gradient(linear, left top, right top, from(#1E88E5), to(#0D47A1));
+  background-image: -webkit-linear-gradient(to right, #1E88E5, #0D47A1);
+  background-image: -moz-linear-gradient(to right, #1E88E5, #0D47A1);
+  background-image: -ms-linear-gradient(to right, #1E88E5, #0D47A1);
+  background-image: -o-linear-gradient(to right, #1E88E5, #0D47A1);
+  background-image: linear-gradient(to right, #1E88E5, #0D47A1);
+  color: #f4f4f4;
+  padding: 0.5rem;
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%), 0 1px 10px 0 rgb(0 0 0 / 12%), 0 4px 5px 0 rgb(0 0 0 / 14%);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+   box-sizing: border-box;
+  z-index: 997;
+}
+
+::ng-deep .p-dialog .p-dialog-footer {
+  background-color: #F0F0F0;
+  padding: 0 1.5rem 0 1.5rem;
+}
+
+
+::ng-deep .p-dialog .p-dialog-footer .rodape-dialog {
+  margin: 0 !important;
+}

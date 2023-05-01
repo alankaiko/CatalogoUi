@@ -1,0 +1,13 @@
+<div class="campo-container-texto-area">
+  <label *ngIf="possuiLabel">{{labelText}}</label>
+  <textarea #inputNativo
+            pInputTextarea
+            [class]="classe"
+            [required]="required"
+            [readOnly]="readOnly"
+            [maxlength]="maxlength"
+            [rows]="rows"
+            [placeholder]="placeholder"
+            [(ngModel)]="texto">
+</textarea>
+</div>

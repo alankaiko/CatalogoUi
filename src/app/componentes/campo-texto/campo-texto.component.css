@@ -1,0 +1,8 @@
+.campo-container-texto {
+  display: inline-grid;
+  width: 100%;
+}
+
+::ng-deep .campo-container-texto .p-inputtext {
+  padding: 0.1rem;
+}
