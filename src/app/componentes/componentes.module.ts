@@ -1,11 +1,7 @@
 import { NgModule } from '@angular/core';
-import {CampoAutocompleteComponent} from "./campo-autocomplete/campo-autocomplete.component";
 import {AutoCompleteModule} from "primeng/autocomplete";
 import {SharedModule} from "primeng/api";
 import {FormsModule} from "@angular/forms";
-import {CampoAutocompleteAtendimentoComponent} from "./campo-autocomplete-atendimento/campo-autocomplete-atendimento.component";
-import {CampoAutocompleteMedicoComponent} from "./campo-autocomplete-medico/campo-autocomplete-medico.component";
-import {CampoAutocompleteProcedimentoComponent} from "./campo-autocomplete-procedimento/campo-autocomplete-procedimento.component";
 import {CampoButtonComponent} from "./campo-button/campo-button.component";
 import {CampoButtonAComponent} from "./campo-button-a/campo-button-a.component";
 import {CampoButtonDeListaComponent} from "./campo-button-de-lista/campo-button-de-lista.component";
@@ -53,10 +49,6 @@ import {DialogModule} from "primeng/dialog";
 
 @NgModule({
   declarations: [
-    CampoAutocompleteComponent,
-    CampoAutocompleteAtendimentoComponent,
-    CampoAutocompleteMedicoComponent,
-    CampoAutocompleteProcedimentoComponent,
     CampoButtonComponent,
     CampoButtonAComponent,
     CampoButtonDeListaComponent,
@@ -85,10 +77,6 @@ import {DialogModule} from "primeng/dialog";
     DialogoDinamicoComponent
   ],
   exports: [
-    CampoAutocompleteComponent,
-    CampoAutocompleteAtendimentoComponent,
-    CampoAutocompleteMedicoComponent,
-    CampoAutocompleteProcedimentoComponent,
     CampoButtonComponent,
     CampoButtonAComponent,
     CampoButtonDeListaComponent,

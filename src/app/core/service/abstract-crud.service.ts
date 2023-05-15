@@ -5,6 +5,7 @@ import {catchError, map} from 'rxjs/operators';
 import {AbstractService} from "./abstract-service";
 import {Observable} from "rxjs";
 import {PageDTO} from "../model/page-dto";
+import {environment} from "../../../environments/environment";
 
 export abstract class AbstractCrudService<T extends AbstractEntity, D extends AbstractDTO> extends AbstractService {
 
@@ -13,7 +14,7 @@ export abstract class AbstractCrudService<T extends AbstractEntity, D extends Ab
   }
 
   protected url(path?: string) {
-    const url = `api/${this.path}`;
+    const url = `${environment.apiUrl}/api/${this.path}`;
     return path ? url.concat(`/${path}`) : url;
   }
 

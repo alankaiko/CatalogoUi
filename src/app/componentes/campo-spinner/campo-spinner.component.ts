@@ -1,6 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {PrimeNGConfig} from "primeng/api";
-import {constantes} from "../../shared-util/constante";
+import {constantes} from "../../core/constante";
 
 @Component({
   selector: 'campo-spinner',

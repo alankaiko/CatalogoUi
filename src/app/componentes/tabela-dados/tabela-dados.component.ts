@@ -12,7 +12,7 @@ import {
 import {Table} from 'primeng/table';
 import {get} from 'lodash';
 import {LazyLoadEvent} from "primeng/api";
-import {ColunaTabela} from "../../shared-util/ColunaTabela";
+import {ColunaTabela} from "../../core/ColunaTabela";
 
 @Component({
   selector: 'tabela-dados',

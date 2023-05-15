@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {AbstractCrudService} from "../../../core/service/abstract-crud.service";
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpParams} from "@angular/common/http";
 import {Grupo} from "./grupo";
 import {GrupoDTO} from "./grupo-dto";
 
@@ -10,5 +10,30 @@ import {GrupoDTO} from "./grupo-dto";
 export class GrupoService extends AbstractCrudService<Grupo, GrupoDTO> {
   constructor(http: HttpClient) {
     super('grupos', http);
+  }
+
+  consultar(filtro?: GrupoDTO): Promise<any> {
+    let params = new HttpParams({
+      fromObject: {
+        page: filtro.pagina.toString(),
+        size: filtro.itensPorPagina.toString()
+      }
+    });
+
+    if (filtro.nome)
+      params = params.append('nome', filtro.nome);
+
+    return this.http.get<any>(this.url(`?resumo`), { params })
+      .toPromise()
+      .then(response => {
+        const grupos = response;
+
+        const resultado = {
+          grupos,
+          total: response.totalElements
+        };
+
+        return resultado;
+      });
   }
 }

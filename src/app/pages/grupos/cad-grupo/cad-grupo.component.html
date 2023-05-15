@@ -1,1 +1,28 @@
-<p>cad-grupo works!</p>
+<p-toast [style]="{marginBottom: '50px'}" position="bottom-right"></p-toast>
+
+<div>
+  <campo-texto [labelText]="'Grupo'"
+               [(texto)]="grupo.nome">
+  </campo-texto>
+
+  <campo-texto [labelText]="'Descrição'"
+               [(texto)]="grupo.descricao">
+  </campo-texto>
+
+  <campo-data [labelText]="'Data Cadastro'"
+              [(texto)]="grupo.datacadastro"
+              [readOnly]="true"
+              [dateFormat]="'dd/mm/yy'"
+              [showOnFocus]="false">
+  </campo-data>
+
+  <campo-botao [label]="'Salvar'"
+               [icon]="'pi pi-arrow-left'"
+               (click)="AdicionarGrupo()">
+  </campo-botao>
+
+  <campo-botao [label]="'Voltar'"
+               [icon]="'pi pi-arrow-left'"
+               (click)="Voltar()">
+  </campo-botao>
+</div>
