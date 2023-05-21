@@ -5,6 +5,7 @@ import { CadGrupoComponent } from './cad-grupo/cad-grupo.component';
 import {GruposRoutingModule} from "./grupos-routing.module";
 import {ComponentesModule} from "../../componentes/componentes.module";
 import {ToastModule} from "primeng/toast";
+import {TableModule} from "primeng/table";
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import {ToastModule} from "primeng/toast";
     CommonModule,
     GruposRoutingModule,
     ComponentesModule,
-    ToastModule
+    ToastModule,
+    TableModule
   ]
 })
 export class GruposModule { }

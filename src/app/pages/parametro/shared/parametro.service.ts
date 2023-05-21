@@ -1,18 +1,18 @@
 import {Injectable} from '@angular/core';
 import {AbstractCrudService} from "../../../core/service/abstract-crud.service";
-import {Produto} from "./produto";
-import {ProdutoDTO} from "./produto-dto";
+import {Parametro} from "./parametro";
+import {ParametroDTO} from "./parametro-dto";
 import {HttpClient, HttpHeaders, HttpParams} from "@angular/common/http";
 
 @Injectable({
   providedIn: 'root'
 })
-export class ProdutoService extends AbstractCrudService<Produto, ProdutoDTO> {
+export class ParametroService extends AbstractCrudService<Parametro, ParametroDTO> {
   constructor(http: HttpClient) {
-    super('produtos', http);
+    super('parametros', http);
   }
 
-  consultar(filtro?: ProdutoDTO): Promise<any> {
+  consultar(filtro?: ParametroDTO): Promise<any> {
     let params = new HttpParams({
       fromObject: {
         page: filtro.pagina.toString(),
@@ -23,26 +23,17 @@ export class ProdutoService extends AbstractCrudService<Produto, ProdutoDTO> {
     if (filtro.nome)
       params = params.append('nome', filtro.nome);
 
-    return this.http.get<any>(this.url(`?resumo`), { params })
+    return this.http.get<any>(this.url(`?resumo`), {params})
       .toPromise()
       .then(response => {
-        const produtos = response;
+        const parametros = response;
 
         const resultado = {
-          produtos,
+          parametros,
           total: response.totalElements
         };
 
         return resultado;
       });
-  }
-
-  uploadHeaders(): HttpHeaders {
-    return new HttpHeaders()
-      .append('Authorization', 'Bearer ' + localStorage.getItem('token'))
-  }
-
-  urlUploadAnexo(): string {
-    return `${this.url}/anexo`;
   }
 }

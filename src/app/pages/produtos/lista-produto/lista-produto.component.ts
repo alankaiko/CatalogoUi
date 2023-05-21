@@ -1,7 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {ProdutoService} from "../shared/produto.service";
 import {ProdutoDTO} from "../shared/produto-dto";
-import {response} from "express";
+import {Produto} from "../shared/produto";
+import {LazyLoadEvent} from "primeng/api";
 
 @Component({
   selector: 'app-lista-produto',
@@ -10,15 +11,31 @@ import {response} from "express";
 })
 export class ListaProdutoComponent implements OnInit{
   filtro = new ProdutoDTO;
+  produtos: Produto[];
+  totalRegistros = 0;
 
   constructor(private produtoService: ProdutoService) {
   }
 
   ngOnInit(): void {
-    this.produtoService.consultar(this.filtro).then(response => {
-      console.log('teste');
-      console.log(response);
-    })
+  }
+
+  Consultar(pagina = 0): Promise<any> {
+    this.filtro.pagina = pagina;
+
+    return this.produtoService.consultar(this.filtro)
+      .then(response => {
+        this.totalRegistros = response.total;
+        this.produtos = response.produtos.content;
+      }).catch(erro => console.log(erro));
+  }
+
+  MudarPagina(event: LazyLoadEvent) {
+    setTimeout(() => {
+      this.filtro.nome = event.globalFilter;
+      const pagina = event.first! / event.rows!;
+      this.Consultar(pagina);
+    }, 250);
   }
 
 }

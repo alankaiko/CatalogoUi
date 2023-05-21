@@ -1,1 +1,22 @@
-<p>lista-grupo works!</p>
+<p-table [value]="grupos"
+         responsiveLayout="scroll"
+         [rows]="filtro.itensPorPagina"
+         [paginator]="true"
+         [totalRecords]="totalRegistros"
+         [lazy]="true"
+         (onLazyLoad)="MudarPagina($event)">
+
+  <ng-template pTemplate="header">
+    <tr>
+      <th>Nome</th>
+      <th>Descrição</th>
+    </tr>
+  </ng-template>
+
+  <ng-template pTemplate="body" let-grupo>
+    <tr>
+      <td>{{grupo.nome}}</td>
+      <td>{{grupo.descricao}}</td>
+    </tr>
+  </ng-template>
+</p-table>

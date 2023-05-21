@@ -7,4 +7,5 @@ export class Produto extends AbstractEntity{
   descricao!: string;
   imagems!: Imagem[];
   grupo!: Grupo;
+  informacao!: string;
 }

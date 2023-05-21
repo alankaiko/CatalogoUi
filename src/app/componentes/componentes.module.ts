@@ -46,6 +46,8 @@ import { DialogoModalComponent } from './dialogo-modal/dialogo-modal.component';
 import { DialogoConfirmacaoComponent } from './dialogo-confirmacao/dialogo-confirmacao.component';
 import { DialogoDinamicoComponent } from './dialogo-dinamico/dialogo-dinamico.component';
 import {DialogModule} from "primeng/dialog";
+import { CardProdutoComponent } from './card-produto/card-produto.component';
+import {CardModule} from "primeng/card";
 
 @NgModule({
   declarations: [
@@ -74,7 +76,8 @@ import {DialogModule} from "primeng/dialog";
     CampoToolbarComponent,
     DialogoModalComponent,
     DialogoConfirmacaoComponent,
-    DialogoDinamicoComponent
+    DialogoDinamicoComponent,
+    CardProdutoComponent
   ],
   exports: [
     CampoButtonComponent,
@@ -102,7 +105,8 @@ import {DialogModule} from "primeng/dialog";
     CampoToolbarComponent,
     DialogoModalComponent,
     DialogoConfirmacaoComponent,
-    DialogoDinamicoComponent
+    DialogoDinamicoComponent,
+    CardProdutoComponent
   ],
   imports: [
     CommonModule,
@@ -119,6 +123,7 @@ import {DialogModule} from "primeng/dialog";
     InputTextareaModule,
     SpinnerModule,
     RadioButtonModule,
+    CardModule,
     InputNumberModule,
     EditorModule,
     CalendarModule,

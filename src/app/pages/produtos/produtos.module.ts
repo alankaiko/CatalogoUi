@@ -5,6 +5,7 @@ import { CadProdutoComponent } from './cad-produto/cad-produto.component';
 import {ProdutosRoutingModule} from "./produtos-routing.module";
 import {ComponentesModule} from "../../componentes/componentes.module";
 import {ToastModule} from "primeng/toast";
+import {DataViewModule} from "primeng/dataview";
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import {ToastModule} from "primeng/toast";
     CommonModule,
     ProdutosRoutingModule,
     ComponentesModule,
-    ToastModule
+    ToastModule,
+    DataViewModule
   ]
 })
 export class ProdutosModule { }

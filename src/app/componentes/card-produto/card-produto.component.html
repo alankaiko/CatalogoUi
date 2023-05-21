@@ -1,0 +1,13 @@
+<p-card>
+  <ng-template pTemplate="header">
+    {{produto.nome}}
+  </ng-template>
+
+  <ng-template pTemplate="body">
+    {{produto.descricao}}
+  </ng-template>
+
+  <ng-template pTemplate="footer">
+    {{produto.datacadastro | date:'dd-mm-yy'}}
+  </ng-template>
+</p-card>

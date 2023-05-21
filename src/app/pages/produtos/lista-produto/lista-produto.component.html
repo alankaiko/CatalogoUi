@@ -1,1 +1,13 @@
-<p>lista-produto works!</p>
+<p-dataView [value]="produtos"
+            [rows]="filtro.itensPorPagina"
+            [paginator]="true"
+            [totalRecords]="totalRegistros"
+            [lazy]="true"
+            (onLazyLoad)="MudarPagina($event)">
+
+  <ng-template let-produto pTemplate="listItem">
+    <div>
+      <card-produto [produto]="produto"></card-produto>
+    </div>
+  </ng-template>
+</p-dataView>

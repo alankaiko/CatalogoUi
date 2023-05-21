@@ -1,28 +1,69 @@
 <p-toast [style]="{marginBottom: '50px'}" position="bottom-right"></p-toast>
 
-<div>
-  <campo-texto [labelText]="'Nome'"
-               [(texto)]="produto.nome">
-  </campo-texto>
+<div class="grid">
+  <div class="col-8">
+    <campo-texto [labelText]="'Nome'"
+                 [(texto)]="produto.nome">
+    </campo-texto>
+  </div>
 
-  <campo-texto [labelText]="'Descrição'"
-               [(texto)]="produto.descricao">
-  </campo-texto>
+  <div class="col-12">
+    <campo-texto [labelText]="'Descrição'"
+                 [(texto)]="produto.descricao">
+    </campo-texto>
+  </div>
 
-  <campo-data [labelText]="'Data Cadastro'"
-              [(texto)]="produto.datacadastro"
-              [readOnly]="true"
-              [dateFormat]="'dd/mm/yy'"
-              [showOnFocus]="false">
-  </campo-data>
+  <div class="col-12">
+    <campo-data [labelText]="'Data Cadastro'"
+                [(texto)]="produto.datacadastro"
+                [readOnly]="true"
+                [dateFormat]="'dd/mm/yy'"
+                [showOnFocus]="false">
+    </campo-data>
+  </div>
 
-  <campo-botao [label]="'Salvar'"
-               [icon]="'pi pi-arrow-left'"
-               (click)="AdicionarProduto()">
-  </campo-botao>
+  <div class="col-12">
+    <campo-dropdown [options]="dropgrupos"
+                    [labelText]="'Grupo'"
+                    [autoDisplayFirst]="false"
+                    [(texto)]="produto.grupo">
+    </campo-dropdown>
+  </div>
 
-  <campo-botao [label]="'Voltar'"
-               [icon]="'pi pi-arrow-left'"
-               (click)="Voltar()">
-  </campo-botao>
+  <campo-texto-area [labelText]="'Descrição'"
+                    [(texto)]="produto.informacao"
+                    [rows]="10">
+  </campo-texto-area>
+
+  <div class="col-12">
+    <campo-botao [label]="'Salvar'"
+                 [icon]="'pi pi-arrow-left'"
+                 (click)="AdicionarProduto()">
+    </campo-botao>
+    <div class="col-12">
+
+    </div>
+    <campo-botao [label]="'Voltar'"
+                 [icon]="'pi pi-arrow-left'"
+                 (click)="Voltar()">
+    </campo-botao>
+  </div>
+
+  <div class="col-12" style="background-color: red">
+    <campo-upload [name]="'anexo'"
+                  [labelText]="'Imagem'"
+                  [style]="{margin: '2px'}"
+                  [mode]="'basic'"
+                  [auto]="true"
+                  [chooseIcon]="'unset'"
+                  [maxFileSize]="100000000"
+                  [chooseLabel]="'Selecionar'"
+                  [accept]="'image/*'"
+                  [headers]="uploadHeaders"
+                  [url]="urlUploadAnexo"
+                  [possuiLabel]="false"
+                  (onUpload)="aoTerminarUploadAnexo($event)"
+                  (onError)="erroUpload($event)">
+    </campo-upload>
+  </div>
 </div>

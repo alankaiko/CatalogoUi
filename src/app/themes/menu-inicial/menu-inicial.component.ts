@@ -16,13 +16,13 @@ export class MenuInicialComponent implements OnInit{
   CarregarMenu() {
     this.items = [
       {
-        label: 'Produto', routerLink: ['pages/produtos'],
+        label: 'Parametro', routerLink: ['pages/produtos'],
       },
       {
         label: 'Grupo', routerLink: ['pages/grupos'],
       },
       {
-        label: 'Cadastrar Produto', routerLink: ['pages/produtos/cadastrar'],
+        label: 'Cadastrar Parametro', routerLink: ['pages/produtos/cadastrar'],
       },
       {
         label: 'Cadastrar Grupo', routerLink: ['pages/grupos/cadastrar'],

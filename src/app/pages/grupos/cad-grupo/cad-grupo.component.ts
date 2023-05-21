@@ -20,7 +20,6 @@ export class CadGrupoComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
     if(isEmptyObject(this.grupo.datacadastro))
       this.grupo.datacadastro = new Date;
   }
