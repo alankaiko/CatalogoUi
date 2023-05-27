@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {ProdutoService} from "../shared/produto.service";
-import {ProdutoDTO} from "../shared/produto-dto";
-import {Produto} from "../shared/produto";
+import {ProdutoService} from "../../../zservices/produto.service";
+import {ProdutoDTO} from "../../../shared/dto/produto-dto";
+import {Produto} from "../../../shared/model/produto";
 import {LazyLoadEvent} from "primeng/api";
 
 @Component({

@@ -1,0 +1,33 @@
+::ng-deep .title-bar-controls button {
+  background-repeat: no-repeat;
+}
+
+.titulo-label {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.container-de-campos {
+  padding-top: 0 ;
+  padding-bottom: 0;
+  padding-left: 0.1rem;
+  padding-right: 0.1rem;
+}
+
+::ng-deep .title-bar-controls button {
+  min-height: 18px !important;
+  min-width: 18px !important;
+}
+
+::ng-deep .p-overlaypanel .p-overlaypanel-close {
+  top: 0 !important;
+  right: 0 !important;
+  border-radius: 5px !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+.rodape-dialog {
+  padding: 0;
+  margin: 0;
+}

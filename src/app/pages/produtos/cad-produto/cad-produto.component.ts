@@ -1,10 +1,10 @@
 import {Component, OnInit} from '@angular/core';
-import {Produto} from "../shared/produto";
-import {ProdutoService} from "../shared/produto.service";
+import {Produto} from "../../../shared/model/produto";
+import {ProdutoService} from "../../../zservices/produto.service";
 import {isEmptyObject} from "jquery";
 import {Location} from '@angular/common';
 import {MessageService} from "primeng/api";
-import {GrupoService} from "../../grupos/shared/grupo.service";
+import {GrupoService} from "../../../zservices/grupo.service";
 
 @Component({
   selector: 'app-cad-produto',

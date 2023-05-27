@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {GrupoService} from "../shared/grupo.service";
-import {Grupo} from "../shared/grupo";
+import {GrupoService} from "../../../zservices/grupo.service";
+import {Grupo} from "../../../shared/model/grupo";
 import {LazyLoadEvent} from "primeng/api";
-import {GrupoDTO} from "../shared/grupo-dto";
+import {GrupoDTO} from "../../../shared/dto/grupo-dto";
 
 @Component({
   selector: 'lista-grupo',

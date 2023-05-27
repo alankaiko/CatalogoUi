@@ -2,17 +2,27 @@
   <label *ngIf="possuiLabel">{{labelText}}</label>
   <p-fileUpload [name]="name"
                 [mode]="mode"
+                [multiple]="multiple"
                 [chooseIcon]="chooseIcon"
+                [chooseLabel]="chooseLabel"
+                [uploadIcon]="uploadIcon"
+                [uploadLabel]="uploadLabel"
+                [cancelIcon]="cancelIcon"
+                [cancelLabel]="cancelLabel"
                 [auto]="auto"
                 [class]="classe"
                 [id]="id"
                 [maxFileSize]="maxFileSize"
-                [chooseLabel]="chooseLabel"
                 [accept]="accept"
                 [headers]="headers"
                 [url]="url"
                 (onUpload)="onUpload.emit($event)"
                 (onError)="onError.emit()">
+
+
+    <ng-container>
+      <ng-template [ngTemplateOutlet]="corpoRef" ></ng-template>
+    </ng-container>
   </p-fileUpload>
 </div>
 

@@ -26,6 +26,10 @@ const routes: Routes = [
     path: 'grupos',
     loadChildren: () => import('./grupos/grupos.module').then(m => m.GruposModule)
   },
+  {
+    path: 'parametro',
+    loadChildren: () => import('./parametro/parametro.module').then(m => m.ParametroModule)
+  },
 ];
 
 @NgModule({

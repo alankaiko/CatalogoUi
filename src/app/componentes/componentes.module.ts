@@ -23,7 +23,6 @@ import {TabelaDadosComponent} from "./tabela-dados/tabela-dados.component";
 import {StickAvisoComponent} from "./stick-aviso/stick-aviso.component";
 import {ToastModule} from "primeng/toast";
 import {TableModule} from "primeng/table";
-import {PainelTabsPrimeComponent} from "./painel-tabs-prime/painel-tabs-prime.component";
 import {TabViewModule} from "primeng/tabview";
 import {PainelTabsComponent} from "./painel-tabs/painel-tabs.component";
 import {FileUploadModule} from "primeng/fileupload";
@@ -71,7 +70,6 @@ import {CardModule} from "primeng/card";
     TabelaDadosComponent,
     StickAvisoComponent,
     CampoBotaoComponent,
-    PainelTabsPrimeComponent,
     PainelTabsComponent,
     CampoToolbarComponent,
     DialogoModalComponent,
@@ -100,7 +98,6 @@ import {CardModule} from "primeng/card";
     CampoBotaoComponent,
     TabelaDadosComponent,
     StickAvisoComponent,
-    PainelTabsPrimeComponent,
     PainelTabsComponent,
     CampoToolbarComponent,
     DialogoModalComponent,

@@ -1,1 +1,65 @@
-<p>cad-parametro works!</p>
+<div class="grid">
+  <div class="col-12">
+    <campo-texto [labelText]="'Título'"
+                 [(texto)]="parametro.nome">
+    </campo-texto>
+  </div>
+
+
+  <div class="col-12">
+    <div *ngFor="let informacao of parametro.informacoes">
+      <campo-texto [labelText]="'Título'"
+                   [(texto)]="informacao.titulo">
+      </campo-texto>
+
+      <div class="col-12"></div>
+      <campo-texto [labelText]="'Texto'"
+                   [(texto)]="informacao.texto">
+      </campo-texto>
+
+      <div class="col-12">
+        <campo-upload [name]="'anexo'"
+                      [multiple]="true"
+                      [auto]="true"
+                      [chooseIcon]="'unset'"
+                      [chooseLabel]="'Selecionar'"
+                      [maxFileSize]="100000000"
+                      [accept]="'image/*'"
+                      [headers]="uploadHeaders"
+                      [url]="urlUploadAnexo"
+                      [possuiLabel]="false"
+                      (onUpload)="aoTerminarUploadAnexo($event)"
+                      (onError)="erroUpload($event)">
+        </campo-upload>
+      </div>
+
+      <div class="col-12">
+        <campo-botao [label]="'Remover'"
+                     [icon]="'pi pi-arrow-left'"
+                     (click)="removerParametro()">
+        </campo-botao>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-12 inline-flex">
+    <campo-botao [label]="'Adicionar'"
+                 [icon]="'pi pi-arrow-left'"
+                 (click)="adicionarInformacao()">
+    </campo-botao>
+  </div>
+
+  <div class="col-12">
+    <campo-botao [label]="'Salvar'"
+                 [icon]="'pi pi-arrow-left'"
+                 (click)="SalvarParametro()">
+    </campo-botao>
+    <div class="col-12">
+
+    </div>
+    <campo-botao [label]="'Voltar'"
+                 [icon]="'pi pi-arrow-left'"
+                 (click)="Voltar()">
+    </campo-botao>
+  </div>
+</div>

@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {Grupo} from "../shared/grupo";
+import {Grupo} from "../../../shared/model/grupo";
 import {Location} from '@angular/common';
-import {GrupoService} from "../shared/grupo.service";
+import {GrupoService} from "../../../zservices/grupo.service";
 import {MessageService} from "primeng/api";
 import {isEmptyObject} from "jquery";
 

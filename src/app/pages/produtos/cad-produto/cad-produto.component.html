@@ -30,10 +30,34 @@
     </campo-dropdown>
   </div>
 
-  <campo-texto-area [labelText]="'Descrição'"
-                    [(texto)]="produto.informacao"
-                    [rows]="10">
-  </campo-texto-area>
+  <div class="col-12">
+    <campo-texto-area [labelText]="'Descrição'"
+                      [(texto)]="produto.informacao"
+                      [rows]="10">
+    </campo-texto-area>
+  </div>
+
+  <div class="col-12">
+    <campo-upload [name]="'anexo'"
+                  [multiple]="true"
+                  [auto]="true"
+                  [chooseIcon]="'unset'"
+                  [chooseLabel]="'Selecionar'"
+                  [maxFileSize]="100000000"
+                  [accept]="'image/*'"
+                  [headers]="uploadHeaders"
+                  [url]="urlUploadAnexo"
+                  [possuiLabel]="false"
+                  (onUpload)="aoTerminarUploadAnexo($event)"
+                  (onError)="erroUpload($event)">
+
+      <ng-template #corpo let-item>
+        <ul *ngIf="produto?.imagems?.length">
+          <li *ngFor="let imagem of produto?.imagems">{{imagem.nomeimagem}}</li>
+        </ul>
+      </ng-template>
+    </campo-upload>
+  </div>
 
   <div class="col-12">
     <campo-botao [label]="'Salvar'"
@@ -47,23 +71,5 @@
                  [icon]="'pi pi-arrow-left'"
                  (click)="Voltar()">
     </campo-botao>
-  </div>
-
-  <div class="col-12" style="background-color: red">
-    <campo-upload [name]="'anexo'"
-                  [labelText]="'Imagem'"
-                  [style]="{margin: '2px'}"
-                  [mode]="'basic'"
-                  [auto]="true"
-                  [chooseIcon]="'unset'"
-                  [maxFileSize]="100000000"
-                  [chooseLabel]="'Selecionar'"
-                  [accept]="'image/*'"
-                  [headers]="uploadHeaders"
-                  [url]="urlUploadAnexo"
-                  [possuiLabel]="false"
-                  (onUpload)="aoTerminarUploadAnexo($event)"
-                  (onError)="erroUpload($event)">
-    </campo-upload>
   </div>
 </div>

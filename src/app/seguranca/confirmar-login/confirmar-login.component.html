@@ -1,0 +1,47 @@
+<p-dialog [header]="tituloHeader"
+          [(visible)]="visible"
+          [modal]="true"
+          [style]="{'width': '20%'}"
+          [baseZIndex]="10000"
+          [draggable]="true"
+          [resizable]="false"
+          (onShow)="onShow()"
+          (onHide)="onHide()">
+
+  <ng-template pTemplate="body">
+    <div class="grid" style="margin: 0">
+      <div class="col-12 grid" style="margin: 0">
+
+        <div class="col-12 container-de-campos">
+          <campo-texto [labelText]="'Login'"
+                       [(texto)]="usuario.login">
+          </campo-texto>
+        </div>
+
+        <div class="col-12 container-de-campos">
+          <campo-texto [labelText]="'Senha'"
+                       [(texto)]="usuario.senha"
+                       [type]="'password'">
+          </campo-texto>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+
+  <ng-template pTemplate="footer">
+    <div class="rodape-dialog grid">
+      <div class="col-12" style="text-align: right">
+        <button [style]="{'margin':'3px'}"
+                (click)="Salvar()">
+          Salvar
+        </button>
+
+        <button (click)="onHide()"
+                [style]="{'margin':'3px'}">
+          Cancelar
+        </button>
+      </div>
+    </div>
+  </ng-template>
+</p-dialog>
+
